@@ -2,13 +2,15 @@ import React from 'react'
 import {useState, useEffect} from 'react'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import {useDispatch} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 import {add} from '../store/cartSlice';
+import {getProducts} from '../store/productSlice';
 
 const Product = () => {
     const dispatch = useDispatch();
+    const {data: products} = useSelector(state => state.products)
 
-    const [products, getProducts] = useState([])
+    // const [products, getProducts] = useState([])
 
     useEffect(() => {
         //api

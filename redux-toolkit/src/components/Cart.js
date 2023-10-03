@@ -1,5 +1,5 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux/es/hooks/useSelector';
+import { useSelector, useDispatch } from 'react-redux';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import {remove} from '../store/cartSlice';
